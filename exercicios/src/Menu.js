@@ -6,8 +6,13 @@ import ParImpar from './components/ParImpar';
 import Contador from './components/Contador';
 import Plataforma from './components/Plataforma';
 import ValidarProps from './components/ValidarProps'
+import Evento from './components/Evento'
 
 export default createDrawerNavigator({
+    Evento : {
+        screen : () => <Evento/>
+    },
+    
     ValidarProps : {
         screen : () => <ValidarProps  ano={18}/>
     },

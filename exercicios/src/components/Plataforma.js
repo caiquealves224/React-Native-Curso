@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Alert, ToastAndroid, Plataform } from "react-native"
+import { Button, Alert, ToastAndroid, Platform } from "react-native"
 
 export default props => {
     const notificar = msg => {
-        if(Plataform.OS === 'android'){
+        if(Platform.OS === 'android'){
             ToastAndroid.show(msg, ToastAndroid.SHORT)
         } else {
             Alert.alert('Informação', msg)
@@ -11,6 +11,6 @@ export default props => {
     }
     return (
         <Button title="plataforma" 
-            onPress={this.notificar("Parabéns")}> </Button>
+            onPress={() => notificar("Parabéns")} />
     );
 }

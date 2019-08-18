@@ -5,9 +5,14 @@ import Simples from './components/Simples';
 import ParImpar from './components/ParImpar';
 import Contador from './components/Contador';
 import Plataforma from './components/Plataforma';
-import ValidarProps from './components/ValidarProps'
+import ValidarProps from './components/ValidarProps';
+import { TextoSincronizado }  from './components/ComunicacaoIndireta'
 
 export default createDrawerNavigator({
+    TextoSincronizado : {
+        screen: () => TextoSincronizado,
+        navigationOptions : { title : ' Texto Sincronizado' }
+    },
     ValidarProps : {
         screen : () => <ValidarProps  ano={18}/>
     },
@@ -27,4 +32,4 @@ export default createDrawerNavigator({
     Simples : {
         screen : () => <Simples texto="Texto qualquer" /> 
     }
-}, {drawerWidth : 300 });
+}, { drawerWidth : 300 });

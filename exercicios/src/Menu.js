@@ -11,7 +11,7 @@ import { TextoSincronizado }  from './components/ComunicacaoIndireta'
 export default createDrawerNavigator({
     TextoSincronizado : {
         screen: () => TextoSincronizado,
-        navigationOptions : { title : ' Texto Sincronizado' }
+        navigationOptions : { title : 'Texto Sincronizado' }
     },
     ValidarProps : {
         screen : () => <ValidarProps  ano={18}/>

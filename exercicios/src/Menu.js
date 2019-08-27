@@ -6,13 +6,13 @@ import ParImpar from './components/ParImpar';
 import Contador from './components/Contador';
 import Plataforma from './components/Plataforma';
 import ValidarProps from './components/ValidarProps'
-import Evento from './components/Evento'
+import { TextoSincronizado }  from './components/ComunicacaoIndireta'
 
 export default createDrawerNavigator({
-    Evento : {
-        screen : () => <Evento/>
+    TextoSincronizado : {
+        screen: () => TextoSincronizado,
+        navigationOptions : { title : 'Texto Sincronizado' }
     },
-    
     ValidarProps : {
         screen : () => <ValidarProps  ano={18}/>
     },

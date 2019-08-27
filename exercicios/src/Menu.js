@@ -32,4 +32,4 @@ export default createDrawerNavigator({
     Simples : {
         screen : () => <Simples texto="Texto qualquer" /> 
     }
-}, {drawerWidth : 300 });
+}, { drawerWidth : 300 });

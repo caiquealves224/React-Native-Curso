@@ -11,7 +11,7 @@ const alunos = [
     { id : 7, nome : "Guilherme" , nota: 6.9 },
     { id : 8, nome : "Rebeca" , nota: 8.3 },
     { id : 9, nome : "Tobias" , nota: 6.4 },
-    { id : 10, nome : "caique" , nota: 10 },
+    { id : 10, nome : "Caique" , nota: 10 },
     { id : 11, nome : "João vitor" , nota: 6 },
     { id : 11, nome : "João" , nota: 7.9 },
     { id : 12, nome : "Ana" , nota: 7.9 },
@@ -39,3 +39,16 @@ export const Aluno = props =>
         <Text>Nome: {props.nome}</Text>
         <Text style={{fontWeight : 'bold'}}>nota: {props.nota}</Text>
     </View>
+
+export default props => {
+    const renderItem = ({ item }) => {
+        return <Aluno {...item } />
+    }
+
+    return (
+        <ScrollView>
+            <FlatList data={alunos} renderItem={renderItem} 
+            keyExtractor={(_, index) => index.toString()}/>
+        </ScrollView>
+    )
+}

@@ -5,10 +5,15 @@ import Simples from './components/Simples';
 import ParImpar from './components/ParImpar';
 import Contador from './components/Contador';
 import Plataforma from './components/Plataforma';
-import ValidarProps from './components/ValidarProps'
-import { TextoSincronizado }  from './components/ComunicacaoIndireta'
+import ValidarProps from './components/ValidarProps';
+import { TextoSincronizado }  from './components/ComunicacaoIndireta';
+import ListaFlex from './components/ListaFlex';
 
 export default createDrawerNavigator({
+    Lista: {
+        screen: () => ListaFlex,
+        navigationOptions : { title : 'Lista (Flex Box)' },
+    },
     TextoSincronizado : {
         screen: () => TextoSincronizado,
         navigationOptions : { title : 'Texto Sincronizado' }
